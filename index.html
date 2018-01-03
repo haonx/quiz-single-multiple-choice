@@ -1,0 +1,37 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/2.1.0/angular-drag-and-drop-lists.min.js"></script>
+<link rel="stylesheet" href="quiz-single-multiple-choice.css">
+<script src="./quiz-single-multiple-choice.js"></script>
+<script>
+    angular
+        .module("App", ["SingleMultipleChoiceQuiz"])
+        .run(function ($rootScope) {
+            var scope = $rootScope;
+            scope.quiz = {
+                "id": 3464,
+                "number": 2,
+                "videoStart": 96,
+                "videoEnd": 192,
+                "linkedVideoID": null,
+                "type": 1,
+                "linkedQuizID": null,
+                "tip": null,
+                "hint": null,
+                "time": 0,
+                "answers": [{"id": 71538, "text": "Yes", "isCorrect": true, "properties": {}}, {
+                    "id": 71539,
+                    "text": "No",
+                    "isCorrect": false,
+                    "properties": {}
+                }],
+                "question": "Can you run PHP on Linux?",
+                "textContent": "[h1]Why PHP[/h1]\r\n\r\nPHP [b]runs [/b]on numerous, varying platforms, including Windows, Linux, Unix, Mac OS X, and so on.\r\nPHP is [b]compatible [/b]with almost any modern server, such as Apache, IIS, and more.\r\nPHP [b]supports [/b]a wide range of databases.\r\nPHP is [b]free[/b]!\r\n[note]PHP is easy to learn and runs efficiently on the server side.[/note]"
+            };
+            scope.answers = scope.quiz.answers;
+            scope.doWhat = function () {
+            }
+        });
+</script>
+<body ng-app="App">
+<single-multiple-choice-quiz answers="answers" event-correct="doWhat()"></single-multiple-choice-quiz>
+</body>
