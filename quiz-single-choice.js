@@ -1,6 +1,6 @@
-angular.module("SingleMultipleChoiceQuiz", []).directive("singleMultipleChoiceQuiz", function () {
+angular.module("SingleChoiceQuiz", []).directive("singleChoiceQuiz", function () {
     return {
-        templateUrl: "quiz-single-multiple-choice.html",
+        templateUrl: "quiz-single-choice.html",
         scope: {
             eventCorrect: "&",
             answers: "="

@@ -1,10 +1,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/2.1.0/angular-drag-and-drop-lists.min.js"></script>
-<link rel="stylesheet" href="quiz-single-multiple-choice.css">
-<script src="./quiz-single-multiple-choice.js"></script>
+<link rel="stylesheet" href="quiz-single-choice.css">
+<script src="./quiz-single-choice.js"></script>
 <script>
     angular
-        .module("App", ["SingleMultipleChoiceQuiz"])
+        .module("App", ["SingleChoiceQuiz"])
         .run(function ($rootScope) {
             var scope = $rootScope;
             scope.quiz = {
@@ -33,5 +33,5 @@
         });
 </script>
 <body ng-app="App">
-<single-multiple-choice-quiz answers="answers" event-correct="doWhat()"></single-multiple-choice-quiz>
+<single-choice-quiz answers="answers" event-correct="doWhat()"></single-choice-quiz>
 </body>
