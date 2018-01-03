@@ -1,0 +1,11 @@
+<div id="quizSelector">
+    <div class="answers multipleChoiceQuiz">
+        <div class="answer materialCheckbox" ng-class="{selected:answer.selected}" ng-repeat="answer in answers" ng-click="selectAnswer(answer)">
+            <div class="icon">
+                <div class="outline"></div>
+                <div class="fill"></div>
+            </div>
+            <span>{{answer.text}}</span>
+        </div>
+    </div>
+</div>
