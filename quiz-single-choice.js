@@ -1,6 +1,6 @@
 angular.module("SingleChoiceQuiz", []).directive("singleChoiceQuiz", function () {
     return {
-        templateUrl: "quiz-single-choice.html",
+        template: '<div id="quizSelector"> <div class="answers multipleChoiceQuiz"> <div class="answer materialRadio" ng-class="{selected:answer.selected}" ng-repeat="answer in answers" ng-click="selectAnswer(answer)"> <div class="icon"> <div class="outline"></div> <div class="fill"></div> </div> <span>{{answer.text}}</span> </div> </div> </div>',
         scope: {
             eventCorrect: "&",
             answers: "="
