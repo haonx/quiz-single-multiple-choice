@@ -22,7 +22,7 @@ angular.module("SingleChoiceQuiz", []).directive("singleChoiceQuiz", function ()
                 var selectedAnswers = scope.answers.filter(function (value) {
                     return value.selected;
                 });
-                if(correctAnswers.length === selectedAnswers.length) {
+                if(selectedAnswers.length && correctAnswers.length === selectedAnswers.length) {
                     scope.eventCorrect();
                 }
             })
